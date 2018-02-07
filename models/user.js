@@ -2,59 +2,6 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const config = require('../config/database');
 
-/*Inbox schema
-const inboxSchema = mongoose.Schema({
-    
-    title:{
-        type: String,
-        required: true
-    },
-    message:{
-        type: String,
-        required: true
-    },
-    sender:{
-        type: String,
-        required: true
-    },
-    date:{
-        type: String,
-        require: true
-    },
-    time:{
-        type: String,
-        require: true
-    }
-
-});
-
-//outbox schema
-const outboxSchema = mongoose.Schema({
-    
-    title:{
-        type: String,
-        required: true
-    },
-    message:{
-        type: String,
-        required: true
-    },
-    receiver:{
-        type: String,
-        required: true
-    },
-    date:{
-        type: String,
-        require: true
-    },
-    time:{
-        type: String,
-        require: true
-    }
-
-});*/
-
-//TeacherStudent schema
 const classroomSchema = mongoose.Schema({
     name:{
         type: String

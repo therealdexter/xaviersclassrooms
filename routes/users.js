@@ -31,15 +31,36 @@ router.post('/register', (req,res,next) => {
     });
 });
 
-//Authenticate route
+//UID route
+
+router.post('/uidexists', (req,res,next) => {
+    const uid = req.body.uid;
+    User.getPersonByUID(uid, (err,person) => {
+        if(!person){
+            res.json({
+                success: true,
+                message: "UID not yetregistered",
+                person: person
+            });
+        } else {
+            res.json({
+                success: false,
+                message: uid + " is already registered",
+                person: person
+            });
+        }
+    })
+})
+
+//Authentication route
+
 router.post('/authenticate', (req,res,next) => {
     const uid = req.body.uid;
     const password = req.body.password;
     User.getPersonByUID( uid, (err, person) => {
-        console.log(person.inbox);
         if(err) throw err;
         if(!person){
-            return res.json({success: false, message: "Incorrect username or password"});
+            return res.json({success: false, message: "Incorrect UID or password"});
         }
         User.comparePassword(password, person.password, (err, isMatch) => {
             if(err) throw err;
@@ -63,9 +84,9 @@ router.post('/authenticate', (req,res,next) => {
                 res.json({
                     success: false,
                     message: "Incorrect password"
-                })
+                });
             }
-        })
+        });
     })
 
 });
