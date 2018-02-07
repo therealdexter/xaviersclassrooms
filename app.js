@@ -52,7 +52,7 @@ require('./config/passport')(passport);
 app.use('/users',users);
 
 //port to listen on
-const port = process.port || 8080;
+const port = process.env.PORT || 8000
 
 //Index route
 app.get('/',(req,res) =>{
