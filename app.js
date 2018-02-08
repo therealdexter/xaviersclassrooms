@@ -60,6 +60,11 @@ app.get('/',(req,res) =>{
     console.log("Going to homepage");
 });
 
+//handle other routes
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+  });
+
 //start server
 app.listen(port, ()=> {
     console.log("Server started on port "+3000)
