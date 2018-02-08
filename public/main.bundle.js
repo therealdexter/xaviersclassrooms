@@ -548,7 +548,7 @@ var HomeComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/components/inbox/inbox.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-messagenav></app-messagenav>\n\n<div class=\"message-container\">\n    <h5 class=\"page-header\">{{inboxsize}} message(s)</h5>\n    <div *ngFor = \"let message of inbox\" class=\"card card-styling\">\n      <div class=\"card-header\"><h5>{{message.title}}</h5></div>\n      <div class=\"card-body\">\n          <p class=\"card-text\">{{message.message}}</p>\n      </div> \n      <div class=\"card-footer\">\n        <p>Sent by {{message.name}} on {{message.date}} at {{message.time}}</p>\n      </div>\n    </div>\n</div>\n\n<div class=\"empty\"></div>\n"
+module.exports = "<app-messagenav></app-messagenav>\n\n<div class=\"message-container\">\n    <h5 class=\"page-header\">{{inboxsize}} message(s)</h5>\n    <div *ngFor = \"let message of inbox\" class=\"card card-styling\">\n      <div class=\"card-header\"><h5>{{message.title}}</h5></div>\n      <div class=\"card-body container\">\n          <p class=\"card-text\">{{message.message}}</p>\n      </div> \n      <div class=\"card-footer\">\n        <p>Sent by {{message.name}} on {{message.date}} at {{message.time}}</p>\n      </div>\n    </div>\n</div>\n\n<div class=\"empty\"></div>\n"
 
 /***/ }),
 
