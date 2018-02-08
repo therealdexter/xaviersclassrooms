@@ -1594,7 +1594,7 @@ var AuthService = /** @class */ (function () {
         this.loadToken();
         headers.append("Authorization", this.authToken);
         headers.append("Content-Type", "application/json");
-        return this.http.get('/users/profile', { headers: headers }).map(function (res) { return res.json(); });
+        return this.http.get('users/profile', { headers: headers }).map(function (res) { return res.json(); });
     };
     AuthService.prototype.isTeacherLoggedIn = function () {
         var persontoken = JSON.parse(localStorage.getItem('person'));
@@ -1656,7 +1656,7 @@ var MessageService = /** @class */ (function () {
     MessageService.prototype.postMessages = function (message) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/users/send', message, {
+        return this.http.post('users/send', message, {
             headers: headers
         }).map(function (res) { return res.json(); });
     };
@@ -1698,14 +1698,14 @@ var NoticeService = /** @class */ (function () {
     NoticeService.prototype.addNotice = function (notice) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/users/addnotice', notice, {
+        return this.http.post('users/addnotice', notice, {
             headers: headers
         }).map(function (res) { return res.json(); });
     };
     NoticeService.prototype.getNotices = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/users/notices', {
+        return this.http.get('users/notices', {
             headers: headers
         }).map(function (res) { return res.json(); });
     };
