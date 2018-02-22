@@ -1,0 +1,10 @@
+<div *ngIf="person" >
+  <h2 class="page-header">Welcome {{person.name}}</h2><br>
+  <div class="card">
+      <div class="card-header">{{person.uid}}</div>
+      <div class="card-body">{{person.email}}</div> 
+      <div *ngIf="person.isTeacher" class="card-footer">Professor</div>
+      <div *ngIf="!person.isTeacher" class="card-footer">Student</div>
+    </div>
+
+</div>

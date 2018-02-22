@@ -1,0 +1,21 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" routerLink = ""><span style="font-weight: normal">Xavier's </span><span style="font-weight: lighter">Classrooms</span></a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a routerLink = "/" class="nav-link">HOME</a></li>
+      </ul>
+      <ul class="navbar-nav">
+        <li *ngIf="!authService.loggedIn()" class="nav-item"><a routerLink = "/login" class="nav-link">LOGIN</a></li>
+        <li *ngIf="!authService.loggedIn()" class="nav-item"><a routerLink = "/register" class="nav-link">REGISTER</a></li>
+        <li *ngIf="authService.loggedIn()" class="nav-item"><a routerLink = "/messages/inbox" class="nav-link">MESSAGING</a></li>
+        <li *ngIf="authService.loggedIn()" class="nav-item"><a routerLink = "/notices/view" class="nav-link">NOTICES</a></li>
+        <li *ngIf="authService.loggedIn()" class="nav-item"><a routerLink = "/profile" class="nav-link">PROFILE</a></li>
+        <li *ngIf="authService.loggedIn()" class="nav-item"><a (click)="onLogoutClick()" ng-href="" class="nav-link">LOGOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+    

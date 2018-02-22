@@ -1,0 +1,22 @@
+<div *ngIf="authService.isTeacherLoggedIn()" class="container">
+  <br>
+  <h3>Classroom notices</h3>
+  <p>You can view notices or add your own!</p>
+  <div>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/notices/view">View notices</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/notices/add">Add a notice</a>
+      </li>
+    </ul>
+  </div>
+  <br>
+</div>
+<div *ngIf="!authService.isTeacherLoggedIn()" class="container">
+  <br>
+  <h3>Classroom notices</h3>
+  <p>View the notices posted by your professors</p>
+  <br>
+</div>

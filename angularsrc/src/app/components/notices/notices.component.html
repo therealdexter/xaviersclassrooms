@@ -1,0 +1,16 @@
+<app-tabs></app-tabs>
+<div class="notices-container">
+  <h5 class="page-header">{{noticelength}} notice(s)</h5>
+  <div *ngFor = "let notice of notices" class="card card-styling">
+  <div class="card-header"><h4>{{notice.title}}</h4></div>
+  <div class="card-body">
+      <p class="card-text">{{notice.notice}}</p>
+      <h6 class="card-title author">By {{notice.author}}</h6>
+  </div> 
+  <div class="card-footer">
+    <p>Posted on {{notice.date}} at {{notice.time}}</p>
+  </div>
+</div>
+</div>
+
+<div class="empty"></div>

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+#flashMessages > div > p{
+    margin: 0px;
+}
+
+@Keyframes flashfade {
+    0%,100% {opacity:0;}
+    5%,80% {opacity:1}
+    }
+    .flashfade {
+    animation-name: flashfade;
+    animation-duration: 5s;
+    display: block;
+    }

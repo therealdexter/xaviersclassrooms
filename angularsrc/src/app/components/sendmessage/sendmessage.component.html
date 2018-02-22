@@ -1,0 +1,21 @@
+<app-messagenav></app-messagenav>
+
+<div class="container mes-form">
+    <div class="form-group">
+        <h4 class="page-header">Title</h4>
+        <input type="text" name="title" [(ngModel)]="title">
+      </div>
+    <h5 class="page-header">Message</h5>
+    <div class="form-group">
+      <p class="ex" >For ex. you could request for notes, help, etc. </p>
+      <textarea maxlength="250" (input)="updateCharRem()" name="message" [(ngModel)]="message" rows="5" cols="25"></textarea>
+    </div>
+    <p>Characters left: {{length}}</p>
+    <div class="form-group">
+          <h5>To (Enter the UID)</h5>
+          <input type="text" maxlength="6" [(ngModel)]="to" name="to">
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="onMessageSend()">Send</button>
+
+</div>

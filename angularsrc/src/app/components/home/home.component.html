@@ -1,0 +1,13 @@
+<div class="container text-center">
+  <br>
+  <br>
+  <h3>Welcome to Xavier's Classrooms</h3>
+  <p>Your one stop for everything</p>
+  <button *ngIf="!authService.loggedIn()" type="button" class="btn btn-primary" routerLink = "login">Login</button>
+  <button *ngIf="!authService.loggedIn()" type="button" class="btn btn-primary" routerLink = "register">Register</button>
+
+  <br>
+  <p *ngIf="authService.loggedIn()">Head over to <b>messaging</b> to send a personal message to anyone.</p>
+  <br>
+  <p *ngIf="authService.loggedIn()">Want to send something to the whole class? Head over to <b>notices</b> to post a notice everyone can see!<br><small>(Only for professors)</small></p>
+</div>

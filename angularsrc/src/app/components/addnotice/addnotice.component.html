@@ -1,0 +1,14 @@
+<app-tabs></app-tabs>
+<div class="container not-form">
+    <div class="form-group">
+      <h4 class="page-header">Title</h4>
+      <input type="text" name="title" [(ngModel)]="title">
+    </div>
+  <h5 class="page-header"> Add a notice</h5>
+  <div class="form-group">
+    <p class="ex" >For ex. complete journals, 2:40 lecture cancelled, etc. </p>
+    <textarea maxlength="250" (input)="updateCharRem()" name="notice" [(ngModel)]="notice" rows="5" cols="25"></textarea>
+  </div>
+  <p>Characters left: {{length}}</p>
+  <button type="button" class="btn btn-primary" (click)="addNotice()" value="Submit">Submit</button>
+</div>

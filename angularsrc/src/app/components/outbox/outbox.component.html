@@ -1,0 +1,16 @@
+<app-messagenav></app-messagenav>
+
+<div class="message-container">
+        <h5 class="page-header">{{outboxsize}} message(s)</h5>
+        <div *ngFor = "let message of outbox" class="card card-styling">
+          <div class="card-header"><h5>{{message.title}}</h5></div>
+          <div class="card-body">
+              <p class="card-text">{{message.message}}</p>
+          </div> 
+          <div class="card-footer">
+            <p>Sent to {{message.namer}} on {{message.date}} at {{message.time}}</p>
+          </div>
+        </div>
+</div>
+
+<div class="empty"></div>

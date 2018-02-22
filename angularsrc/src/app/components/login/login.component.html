@@ -1,0 +1,16 @@
+<div class="container log-form">
+    <h2 class="page-header" >Login</h2>
+    <br>
+    <form class="form-signin" (submit)="onLoginSubmit()">
+            <div class="form-group">
+              <label for="uid">UID No</label>
+              <input type="text" class="form-control" placeholder="Enter UID" [(ngModel)]="uid" name="uid">
+            </div>
+            <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" placeholder=" Enter Password" [(ngModel)]="password" name="password">
+            </div>
+            <br>
+            <input class="btn btn-lg btn-primary" type="submit" value="Login">
+    </form>
+</div>

@@ -1,0 +1,16 @@
+<app-messagenav></app-messagenav>
+
+<div class="message-container">
+    <h5 class="page-header">{{inboxsize}} message(s)</h5>
+    <div *ngFor = "let message of inbox" class="card card-styling">
+      <div class="card-header"><h5>{{message.title}}</h5></div>
+      <div class="container">
+          <p class="card-text">{{message.message}}</p>
+      </div> 
+      <div class="card-footer">
+        <p>Sent by {{message.name}} on {{message.date}} at {{message.time}}</p>
+      </div>
+    </div>
+</div>
+
+<div class="empty"></div>
